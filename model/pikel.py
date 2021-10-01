@@ -1,8 +1,7 @@
 import os
-from .model import Model
-class Pickle():    
-    def pickl(depth,tree):
-        Model.models(depth,tree)
+from model import models
+def pickl(depth,tree):
+        models(depth,tree)
         with open(os.path.join(os.path.dirname(__file__),'DTC_model.pkl'), 'wb') as file:
             pickle.dump(dtc, file)
             
